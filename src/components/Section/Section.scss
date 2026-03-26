@@ -36,6 +36,12 @@
     background-color: var(--surface);
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
+
+    .Section {
+      &__title {
+        font-size: clamp(37px, 5vw, 54px);
+      }
+    }
   }
 
   @include bp($bp-md) {
@@ -52,6 +58,25 @@
 
     &--paddingBottom {
       padding-bottom: 68px;
+    }
+  }
+
+  @include bp($bp-md) {
+    .Section {
+      padding: 0 8px;
+
+      &__inner {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      &--paddingTop {
+        padding-top: 68px;
+      }
+
+      &--paddingBottom {
+        padding-bottom: 68px;
+      }
     }
   }
 }
