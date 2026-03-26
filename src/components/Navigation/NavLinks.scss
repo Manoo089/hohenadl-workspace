@@ -1,0 +1,20 @@
+.NavLinks {
+  &__list {
+    display: flex;
+    list-style-type: none;
+    gap: 2rem;
+    font-size: clamp(11px, 0.9vw, 13px);
+  }
+
+  &__link {
+    color: var(--text);
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color .3s ease-in-out;
+
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+}

@@ -1,0 +1,100 @@
+@use "components";
+
+:root {
+  --bg: #0a0c10;
+  --surface: #0f1218;
+  --surface2: #161b24;
+  --border: #1e2530;
+  --border2: #2a3340;
+  --text: #d4dbe8;
+  --muted: #777e88;
+  --accent: #3ef0a4;
+
+  // Orb Colors
+  --glow-accent: rgba(62, 240, 164, 0.15);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@media (pointer: fine) {
+  * {
+    cursor: none;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-dm-mono), monospace;
+  background: var(--bg);
+}
+
+h1,
+h2 {
+  font-family: var(--font-syne), sans-serif;
+}
+
+.skip-to-main {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--accent);
+  color: var(--bg);
+  font-weight: 700;
+  z-index: 9999;
+  text-decoration: none;
+
+  &:focus {
+    top: 1rem;
+  }
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .Cursor,
+  .CursorRing {
+    display: none;
+  }
+
+  * {
+    cursor: auto;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}

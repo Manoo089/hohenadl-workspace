@@ -1,0 +1,141 @@
+.Button {
+  min-width: 2.5rem;
+  height: 2.5rem;
+  line-height: 1.25rem;
+  padding-inline: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  font-size: 13px;
+  color: var(--text);
+  text-decoration: none;
+  border: none;
+  outline: none;
+  transition:
+    background-color 0.3s ease-in-out,
+    transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    box-shadow 0.3s ease-in-out;
+  will-change: transform;
+  cursor: pointer;
+  
+  &__arrow {
+    font-size: 16px;
+    margin-left: 8px;
+  }
+}
+
+
+.fullWidth {
+  width: 100% !important;
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.loading {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.colors {
+  &-primary {
+    background-color: var(--accent);
+    color: var(--muted);
+  }
+
+  &-secondary {
+    background-color: cyan;
+    color: white;
+  }
+
+  &-success {
+    background-color: green;
+    color: white;
+  }
+
+  &-warning {
+    background-color: orange;
+    color: white;
+  }
+
+  &-danger {
+    background-color: red;
+    color: white;
+  }
+}
+
+.variants {
+  &-solid {
+    color: var(--surface);
+    font-weight: 500;
+
+    &:hover {
+      box-shadow: 0 8px 32px rgba(62, 240, 164, 0.3);
+    }
+  }
+
+  &-outline {
+    background-color: transparent;
+    color: var(--text);
+    border: 1px solid var(--border2);
+    transition:
+      transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+      border 0.3s ease-in-out,
+      color 0.3s ease-in-out;
+
+    &:hover {
+      color: var(--accent);
+      border: 1px solid var(--accent);
+    }
+  }
+
+  &-ghost {
+    background-color: transparent;
+    color: black;
+    border: none;
+  }
+
+  &-plain {
+    background-color: transparent;
+    color: black;
+    border: none;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+
+.radius {
+  &-none {
+    border-radius: 0;
+  }
+
+  &-small {
+    border-radius: 4px;
+  }
+
+  &-medium {
+    border-radius: 8px;
+  }
+
+  &-large {
+    border-radius: 12px;
+  }
+
+  &-full {
+    border-radius: 9999px;
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

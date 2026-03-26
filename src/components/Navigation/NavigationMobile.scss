@@ -1,0 +1,49 @@
+@use "../../styles/breakpoints.scss" as *;
+@use "../../styles/mixins.scss" as *;
+
+.NavigationMobile {
+  $paddingBox: 36px;
+
+  display: none;
+  position: fixed;
+  top: 60px;
+  right: 8px;
+  padding: $paddingBox $paddingBox;
+
+  z-index: 998;
+  background-color: rgba(10, 12, 16, 0.85);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  backdrop-filter: blur(12px);
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+    gap: 2rem;
+    font-size: clamp(13px, 0.9vw, 15px);
+  }
+
+  &__link {
+    color: var(--muted);
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    padding: 8px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(62, 240, 164, 0.25);
+
+    &:hover {
+      color: var(--surface);
+      background-color: var(--accent);
+    }
+  }
+}
+
+@include bp($bp-sm) {
+  .NavigationMobile {
+    display: block;
+  }
+}

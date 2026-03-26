@@ -1,0 +1,142 @@
+@use "../../styles/breakpoints.scss" as *;
+@use "../../styles/mixins.scss" as *;
+
+.ProjectCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-decoration: none;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+    transition:
+      border-color 0.3s,
+      transform 0.3s;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -16px;
+      right: -16px;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(62, 240, 164, 0.15) 0%, transparent 70% 70%);
+      transform: translate(30%, -30%);
+      pointer-events: none;
+      transition: width 0.3s, height 0.3s;
+    }
+
+    &:hover {
+      border-color: var(--border2);
+      transform: translateY(-3px);
+    }
+
+    @media (hover: hover) and (min-width: 641px) {
+      &:hover .ProjectCard__tech-item {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    &:hover .ProjectCard__arrow {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: rotate(-45deg);
+    }
+
+    &:hover::before {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 28px;
+    right: 28px;
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--border2);
+    border-radius: 50%;
+    color: var(--border2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 0;
+    transition:
+      border-color 0.2s,
+      color 0.2s,
+      transform 0.2s;
+  }
+
+  &__label {
+    font-size: 10px;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+
+  &__title {
+    font-family: Syne, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.5px;
+    margin-bottom: 12px;
+  }
+
+  &__desc {
+    color: var(--muted);
+    font-size: clamp(12px, 1vw, 16px);
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+
+  &__tech {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+
+    &-item {
+      font-size: clamp(12px, 1vw, 14px);
+      padding: 4px 12px;
+      border: 1px solid var(--border2);
+      border-radius: 99px;
+      color: var(--text);
+
+      @media (hover: hover) and (min-width: 641px) {
+        opacity: 0;
+        transform: translateY(6px);
+        transition:
+          opacity 0.2s ease,
+          transform 0.2s ease;
+        transition-delay: calc(var(--i) * 55ms);
+      }
+    }
+  }
+}
+
+@include bp($bp-xs) {
+  .ProjectCard {
+    &__arrow {
+      top: 18px;
+      right: 18px;
+    }
+  }
+}

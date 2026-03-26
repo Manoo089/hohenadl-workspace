@@ -1,0 +1,57 @@
+@use "../../styles/breakpoints.scss" as *;
+@use "../../styles/mixins.scss" as *;
+
+.Section {
+  width: 100%;
+  padding: 0 48px;
+
+  &--paddingTop {
+    padding-top: 100px;
+  }
+
+  &--paddingBottom {
+    padding-bottom: 100px;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  &__tag {
+    @include sectionTag;
+  }
+
+  &__title {
+    @include sectionTitle;
+  }
+
+  &__sub {
+    @include sectionSub;
+  }
+
+  &--contact {
+    background-color: var(--surface);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  @include bp($bp-md) {
+    padding: 0 8px;
+
+    &__inner {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    &--paddingTop {
+      padding-top: 68px;
+    }
+
+    &--paddingBottom {
+      padding-bottom: 68px;
+    }
+  }
+}

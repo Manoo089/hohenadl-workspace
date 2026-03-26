@@ -1,0 +1,14 @@
+.Skills {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 60px;
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+}
