@@ -13,7 +13,7 @@ export const SKILLS: SKILLS_TYPE = [
   { id: 5, icon: "🔍", name: "Accessibility / SEO", tags: ["WCAG 2.1", "ARIA", "Semantic HTML", "Lighthouse"] },
   { id: 6, icon: "🖥️", name: "Linux / DevOps", tags: ["Git/Github", "Docker", "Caddy", "Linux Server"] },
   { id: 7, icon: "🏠", name: "Smart Home", tags: ["Home Assistant", "WLED", "Zigbee"] },
-  { id: 8, icon: "🔌", name: "Emebedded / IoT", tags: ["ESP32", "MIDI", "EasyEDA"] },
+  { id: 8, icon: "🔌", name: "Embedded / IoT", tags: ["ESP32", "MIDI", "EasyEDA"] },
 ] as const;
 
 type PROJECTS_TYPE = {
@@ -68,6 +68,7 @@ export const CONTACT = [
   { id: 1, label: "E-Mail", value: "manuel@hohenadl.dev", href: "mailto:manuel@hohenadl.dev" },
   { id: 2, label: "Webseite", value: "hohenadl.dev", href: "https://hohenadl.dev" },
   { id: 3, label: "Github", value: "github.com/Manoo089", href: "https://github.com/Manoo089" },
+  { id: 4, label: "LinkedIn", value: "linkedin.com", href: "https://www.linkedin.com/in/manuel-hohenadl-b68977131" },
 ];
 
 export const jsonLd = {
