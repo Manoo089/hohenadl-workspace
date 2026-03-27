@@ -48,7 +48,7 @@ export default function Home() {
             id="contact"
             tag="// Kontakt"
             title={`Lass uns<br>was <span class="accent">bauen</span>.`}
-            sub="Offen für Freelance-Projekte, Teilzeit­stellen und spannende Kooperationen — besonders im Raum Bayern oder remote."
+            sub="Offen für Freelance-Projekte oder Teilzeit­stellen oder spannende Kooperationen — besonders im Raum Bayern oder remote."
             variant="contact"
             paddingTop
             paddingBottom
