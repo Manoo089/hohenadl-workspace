@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Syne, DM_Mono } from "next/font/google";
 import "../styles/globals.scss";
 import Navigation from "@/components/Navigation/Navigation";
+import { Cursor } from "@/components/Cursor/Cursor";
 
 const syneSans = Syne({
   subsets: ["latin"],
@@ -50,6 +51,7 @@ export default function RootLayout({
         <a href="#main-content" className="skip-to-main">
           Zum Inhalt springen
         </a>
+        <Cursor />
         <header>
           <Navigation />
         </header>

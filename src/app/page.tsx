@@ -1,5 +1,4 @@
 import { ContactLinks } from "@/components/ContactLinks/ContactLinks";
-import { Cursor } from "@/components/Cursor/Cursor";
 import { Footer } from "@/components/Footer/Footer";
 import { CodeCard } from "@/components/CodeCard/CodeCard";
 import { Hero } from "@/components/Hero/Hero";
@@ -19,7 +18,6 @@ export default function Home() {
       />
 
       <div>
-        <Cursor />
         <main id="main-content">
           <Hero><CodeCard /></Hero>
           <StatsBar />
