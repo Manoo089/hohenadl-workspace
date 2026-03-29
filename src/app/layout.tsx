@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Syne, DM_Mono } from "next/font/google";
 import "../styles/globals.scss";
 import Navigation from "@/components/Navigation/Navigation";
@@ -58,6 +59,7 @@ export default function RootLayout({
         </header>
         {children}
         <ScrollToTop />
+        <Analytics />
       </body>
     </html>
   );
