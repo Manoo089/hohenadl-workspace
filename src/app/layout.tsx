@@ -3,6 +3,7 @@ import { Syne, DM_Mono } from "next/font/google";
 import "../styles/globals.scss";
 import Navigation from "@/components/Navigation/Navigation";
 import { Cursor } from "@/components/Cursor/Cursor";
+import { ScrollToTop } from "@/components/ScrollToTop/ScrollToTop";
 
 const syneSans = Syne({
   subsets: ["latin"],
@@ -46,7 +47,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="de" className={`${syneSans.variable} ${dmMono.variable}`}>
+    <html lang="de" className={`${syneSans.variable} ${dmMono.variable}`} data-scroll-behavior="smooth">
       <body>
         <a href="#main-content" className="skip-to-main">
           Zum Inhalt springen
@@ -56,6 +57,7 @@ export default function RootLayout({
           <Navigation />
         </header>
         {children}
+        <ScrollToTop />
       </body>
     </html>
   );

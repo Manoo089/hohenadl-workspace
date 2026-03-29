@@ -3,7 +3,6 @@ import { Footer } from "@/components/Footer/Footer";
 import { CodeCard } from "@/components/CodeCard/CodeCard";
 import { Hero } from "@/components/Hero/Hero";
 import { ProjectCard } from "@/components/ProjectCard/ProjectCard";
-import { ScrollToTop } from "@/components/ScrollToTop/ScrollToTop";
 import { Section } from "@/components/Section/Section";
 import { Skills } from "@/components/Skills/Skills";
 import { StatsBar } from "@/components/StatsBar/StatsBar";
@@ -19,7 +18,9 @@ export default function Home() {
 
       <div>
         <main id="main-content">
-          <Hero><CodeCard /></Hero>
+          <Hero>
+            <CodeCard />
+          </Hero>
           <StatsBar />
           <Section
             id="skills"
@@ -55,7 +56,6 @@ export default function Home() {
           </Section>
         </main>
         <Footer />
-        <ScrollToTop />
       </div>
     </>
   );

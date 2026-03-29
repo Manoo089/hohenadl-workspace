@@ -14,12 +14,17 @@ export function Footer() {
       </div>
       <nav className="Footer__legal">
         <ul className="Footer__legal-list">
-          <Link href="/impressum" className="Footer__legal-link" rel="nofollow">
-            <li>Impressum</li>
-          </Link>
-          <Link href="/datenschutz" className="Footer__legal-link" rel="nofollow">
-            <li>Datenschutzerklärung</li>
-          </Link>
+          <li>
+            <Link href="/impressum" className="Footer__legal-link" rel="nofollow">
+              Impressum
+            </Link>
+          </li>
+
+          <li>
+            <Link href="/datenschutz" className="Footer__legal-link" rel="nofollow">
+              Datenschutzerklärung
+            </Link>
+          </li>
         </ul>
       </nav>
     </footer>

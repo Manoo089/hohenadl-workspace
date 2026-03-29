@@ -1,3 +1,6 @@
+@use "../../styles/breakpoints.scss" as *;
+@use "../../styles/mixins.scss" as *;
+
 .Datenschutz {
   position: relative;
   max-width: 75%;
@@ -6,6 +9,7 @@
   border-radius: 10px;
   background-color: var(--surface);
   color: var(--text);
+  overflow-wrap: break-word;
 
   &__back {
     position: absolute;
@@ -51,5 +55,12 @@
 
   &__link {
     color: var(--accent);
+  }
+}
+
+@include bp($bp-md) {
+  .Datenschutz {
+    max-width: 100%;
+    padding: 80px 40px;
   }
 }

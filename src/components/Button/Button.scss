@@ -17,7 +17,7 @@
     transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     box-shadow 0.3s ease-in-out;
   will-change: transform;
-  cursor: pointer;
+  cursor: none;
   
   &__arrow {
     font-size: 16px;
