@@ -1,6 +1,5 @@
 "use client";
 
-import { Link } from "react-scroll";
 import { usePathname } from "next/navigation";
 
 const HIDDEN_PATHS = ["/impressum", "/datenschutz"];
@@ -14,19 +13,19 @@ export default function NavLinks() {
     <nav className="NavLinks">
       <ul className="NavLinks__list">
         <li className="NavLinks__item">
-          <Link to={"skills"} className="NavLinks__link">
+          <a href="#skills" className="NavLinks__link">
             skills
-          </Link>
+          </a>
         </li>
         <li className="NavLinks__item">
-          <Link to={"projects"} className="NavLinks__link">
+          <a href="#projects" className="NavLinks__link">
             projekte
-          </Link>
+          </a>
         </li>
         <li className="NavLinks__item">
-          <Link to={"contact"} className="NavLinks__link">
+          <a href="#contact" className="NavLinks__link">
             kontakt
-          </Link>
+          </a>
         </li>
       </ul>
     </nav>

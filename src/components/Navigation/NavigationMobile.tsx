@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from "react";
 import clsx from "clsx";
-import { Link } from "react-scroll";
 import { useClickOutside } from "@/hooks/useClickOutside";
 
 interface Props {
@@ -24,21 +23,21 @@ export function NavigationMobile({ onClick, onScroll, onClickOutside }: Props) {
     <nav ref={ref} className={clsx("NavigationMobile")}>
       <ul className="NavigationMobile__list">
         <li>
-          <Link to="skills" className="NavigationMobile__link" onClick={onClick}>
+          <a href="#skills" className="NavigationMobile__link" onClick={onClick}>
             Skills
-          </Link>
+          </a>
         </li>
 
         <li>
-          <Link to="projects" className="NavigationMobile__link" onClick={onClick}>
+          <a href="#projects" className="NavigationMobile__link" onClick={onClick}>
             Projekte
-          </Link>
+          </a>
         </li>
 
         <li>
-          <Link to="contact" className="NavigationMobile__link" onClick={onClick}>
+          <a href="#contact" className="NavigationMobile__link" onClick={onClick}>
             Kontakt
-          </Link>
+          </a>
         </li>
       </ul>
     </nav>

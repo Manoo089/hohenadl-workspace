@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { Syne, DM_Mono } from "next/font/google";
 import "../styles/globals.scss";
+import "lenis/dist/lenis.css";
+import { ReactLenis } from "lenis/react";
 import Navigation from "@/components/Navigation/Navigation";
 import { Cursor } from "@/components/Cursor/Cursor";
 import { ScrollToTop } from "@/components/ScrollToTop/ScrollToTop";
@@ -48,18 +50,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="de" className={`${syneSans.variable} ${dmMono.variable}`} data-scroll-behavior="smooth">
+    <html lang="de" className={`${syneSans.variable} ${dmMono.variable}`}>
       <body>
-        <a href="#main-content" className="skip-to-main">
-          Zum Inhalt springen
-        </a>
-        <Cursor />
-        <header>
-          <Navigation />
-        </header>
-        {children}
-        <ScrollToTop />
-        <Analytics />
+        <ReactLenis root options={{ lerp: 0.08, wheelMultiplier: 0.8, anchors: true }}>
+          <a href="#main-content" className="skip-to-main">
+            Zum Inhalt springen
+          </a>
+          <Cursor />
+          <header>
+            <Navigation />
+          </header>
+          {children}
+          <ScrollToTop />
+          <Analytics />
+        </ReactLenis>
       </body>
     </html>
   );
