@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Analytics } from "@vercel/analytics/next";
+import Script from "next/script";
 import { Syne, DM_Mono } from "next/font/google";
 import "../styles/globals.scss";
 import "lenis/dist/lenis.css";
@@ -62,8 +62,8 @@ export default function RootLayout({
           </header>
           {children}
           <ScrollToTop />
-          <Analytics />
         </ReactLenis>
+        <Script defer src="https://analytics.manoo089.de/script.js" data-website-id="3f75b44d-6bf4-49f3-a96e-79346106de53" />
       </body>
     </html>
   );

@@ -50,7 +50,7 @@ export const PROJECTS: PROJECTS_TYPE = [
     label: "Wordpress",
     title: "kastanienhof-pfettrach.de",
     description:
-      "Reise-Plattform mit Taxonomie-Filter­system, ACF-Datumsfeldern, Loop Grid und chronologischer Sortierung.",
+      "Webseite für einen Gastro-Betrieb, umgesetzt mit Wordpress und ACF-Field für einfache Verwendung durch den Kunden.",
     tech: ["Wordpress", "Elementor Pro", "ACF"],
   },
   {
