@@ -25,7 +25,7 @@ const dmMono = DM_Mono({
 export const metadata: Metadata = {
   title: process.env.SITE_TITLE,
   description: process.env.SITE_DESCRIPTION,
-  metadataBase: new URL(process.env.SITE_URL!),
+  metadataBase: new URL(process.env.SITE_URL ?? 'https://portfolio.manoo089.de'),
   alternates: { canonical: process.env.SITE_URL },
   openGraph: {
     title: process.env.SITE_TITLE,
