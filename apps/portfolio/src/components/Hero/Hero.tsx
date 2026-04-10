@@ -2,7 +2,7 @@
 
 import clsx from "clsx";
 import { Orb } from "./Orb";
-import Button from "../Button/Button";
+import { Button } from "@repo/ui";
 import { useReveal } from "@/hooks/useReveal";
 import { ReactNode } from "react";
 
