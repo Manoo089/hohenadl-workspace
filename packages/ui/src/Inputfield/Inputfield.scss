@@ -1,0 +1,21 @@
+.Inputfield {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+
+  &__input {
+    padding: 10px;
+  }
+
+  &--required {
+    color: #ef4444;
+  }
+
+  &--isHidden {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+}
