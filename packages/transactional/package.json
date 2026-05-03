@@ -1,0 +1,25 @@
+{
+  "name": "@repo/transactional",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./emails/index.ts",
+  "scripts": {
+    "dev": "email dev",
+    "export": "email export"
+  },
+  "dependencies": {
+    "@react-email/components": "latest",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@react-email/ui": "6.0.5",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "react-email": "latest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.33.0"
+}
