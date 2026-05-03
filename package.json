@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "turbo dev",
+    "dev:test": "turbo dev --filter=test",
+    "dev:portfolio": "turbo dev --filter=portfolio",
+    "preview:emails": "pnpm --filter @repo/transactional dev --port 3001",
     "build": "turbo build",
     "start": "turbo start",
     "lint": "turbo lint"
@@ -11,5 +13,8 @@
   "devDependencies": {
     "turbo": "^2.5.4"
   },
-  "packageManager": "pnpm@10.33.0"
+  "packageManager": "pnpm@10.33.0",
+  "dependencies": {
+    "zod": "^4.4.1"
+  }
 }
