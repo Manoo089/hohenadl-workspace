@@ -7,7 +7,9 @@
     "dev:portfolio": "turbo dev --filter=portfolio",
     "preview:emails": "pnpm --filter @repo/transactional dev --port 3001",
     "build": "turbo build",
+    "build:portfolio": "turbo build --filter=portfolio",
     "start": "turbo start",
+    "start:portfolio": "turbo start --filter=portfolio",
     "lint": "turbo lint"
   },
   "devDependencies": {
