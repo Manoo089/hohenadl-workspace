@@ -45,7 +45,7 @@
   }
 
   @include bp($bp-md) {
-    padding: 0 8px;
+    padding: 0 16px;
 
     &__inner {
       grid-template-columns: 1fr;
