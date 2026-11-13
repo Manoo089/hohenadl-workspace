@@ -1,4 +1,4 @@
-import { Html, Head, Body, Container, Section, Text, Hr, Preview, Img } from "@react-email/components";
+import { Html, Head, Body, Container, Section, Text, Hr, Preview, Img } from "react-email";
 import { ReactNode } from "react";
 
 export interface BrandConfig {

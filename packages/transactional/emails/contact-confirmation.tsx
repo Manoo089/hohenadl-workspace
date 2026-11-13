@@ -1,4 +1,4 @@
-import { Heading, Text, Section } from "@react-email/components";
+import { Heading, Text, Section } from "react-email";
 import EmailLayout, { type BrandConfig, defaultBrand } from "./_components/email-layout";
 
 interface Props {
