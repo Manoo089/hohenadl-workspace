@@ -42,7 +42,7 @@ export default function Image() {
             fontFamily: "monospace",
           }}
         >
-          // Portfolio
+          {"// Web Developer"}
         </div>
 
         {/* Name */}
